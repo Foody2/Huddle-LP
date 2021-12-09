@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+:root {
+  /*Fonts*/
+  --ff-headings: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+
+  /*Colors*/
+  --pink: hsl(322, 100%, 66%);
+  --light-pink: hsl(321, 100%, 78%);
+  --light-red: hsl(0, 100%, 63%);
+
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --very-pale-blue: hsl(207, 100%, 98%);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--ff-body);
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-headings);
+  padding-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--very-dark-cyan);
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+.logo {
+  width: 50%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero h1 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.hero p {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  border-radius: 50px;
+}
+
+.btn-transparent {
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: var(--light-pink);
+  border: 1px solid var(--light-pink);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px;
+}
+
+.btn-pink {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.3rem;
+  background: var(--pink);
+  padding: 1rem;
+  max-width: 50%;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.btn-pink:hover,
+form button:hover {
+  background: var(--light-pink);
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.stats .msg h1 {
+  font-size: 6rem;
+}
+
+.stats .communities h1 {
+  font-size: 7rem;
+}
+
+.stats p {
+  color: var(--very-dark-cyan);
+  text-align: center;
+}
+
+.communities,
+.msg {
+  padding-top: 3rem;
+}
+
+.communities h1::before {
+  content: url(images/icon-communities.svg);
+  display: block;
+  margin-bottom: -30px;
+}
+
+.msg h1::before {
+  content: url(images/icon-messages.svg);
+  display: block;
+  margin-bottom: -30px;
+}
+
+.grow-content {
+  text-align: center;
+  background-color: var(--very-pale-blue);
+  padding: 7rem 2rem 10rem 2rem;
+}
+
+.grow-text {
+  padding-top: 3rem;
+}
+
+.conversation,
+.build {
+  padding: 2rem;
+  text-align: center;
+}
+
+.conversation h2,
+.users h2 {
+  padding-top: 3rem;
+}
+
+.user-content {
+  text-align: center;
+  background-color: var(--very-pale-blue);
+  padding: 7rem 2rem 10rem 2rem;
+}
+
+.build h2 {
+  padding-bottom: 4rem;
+}
+
+.footer-content {
+  background: var(--very-dark-cyan);
+  color: white;
+  padding: 5rem 2rem;
+}
+
+.footer-content h3 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-content p {
+  line-height: 2.5rem;
+}
+
+form {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-areas:
+    "input input"
+    ". button";
+  gap: 2rem;
+}
+
+form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  grid-area: input;
+  cursor: pointer;
+}
+
+form button {
+  border-radius: 10px;
+  padding: 1rem 0;
+  border: none;
+  float: right;
+  background: var(--pink);
+  color: white;
+  font-size: 2rem;
+  grid-area: button;
+  cursor: pointer;
+}
+
+#error {
+  color: var(--light-red);
+  font-size: 0.7rem;
+  margin-top: -8rem;
+  margin-left: 0.2rem;
+  display: none;
+}
+
+.footer-logo {
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
+footer p {
+  color: white;
+}
+
+.footer-logo path {
+  fill: white;
+}
+
+.phone p,
+.email p {
+  color: white;
+}
+
+.phone {
+  padding-top: 3rem;
+}
+
+.email {
+  padding-top: 1rem;
+}
+
+.social-icons {
+  padding-top: 3rem;
+}
+
+.fab {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.fab:hover {
+  color: var(--pink);
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  padding-right: 1rem;
+}
+
+@media (min-width: 58em) {
+  .hero-content {
+    padding: 2rem 4rem;
+  }
+
+  .hero-content p {
+    width: 45%;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    padding-top: 6rem;
+  }
+
+  .btn-pink {
+    width: 320px;
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+  }
+
+  .stats-numbers {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stats .msg h1 {
+    font-size: 7rem;
+  }
+
+  .grow-content,
+  .user-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5rem;
+  }
+
+  .grow-content .grow-text,
+  .user-content .user-text,
+  .conversation .conversation-text {
+    width: 40%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .grow-content .grow-text p,
+  .conversation .conversation-text p,
+  .user-content .user-text p {
+    font-size: 0.9rem;
+  }
+
+  .grow-content img,
+  .user-content img {
+    order: 2;
+    width: 40%;
+  }
+  .grow-text {
+    order: 1;
+  }
+
+  .conversation {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .conversation img {
+    width: 40%;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem 8rem;
+  }
+
+  .footer-content .info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+
+  .footer-content .newsletter {
+    width: 50%;
+    order: 2;
+  }
+
+  .footer-logo {
+    padding-top: 0rem;
+  }
+
+  .newsletter h3 {
+    font-size: 1.2rem;
+  }
+  .newsletter p,
+  .info p {
+    width: 70%;
+    line-height: 1.3rem;
+    font-size: 0.8rem;
+  }
+
+  .info p {
+    width: 100%;
+  }
+
+  form {
+    grid-template-areas: "input  button";
+  }
+
+  form input {
+    border-radius: 5px;
+  }
+
+  form button {
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 5px;
+    max-width: 150px;
+  }
+
+  .fab {
+    font-size: 2rem;
+  }
+
+  #error {
+    margin-top: -1.8rem;
+  }
+}
